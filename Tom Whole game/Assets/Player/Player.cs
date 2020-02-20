@@ -111,11 +111,11 @@ public class Player : MonoBehaviour
         healthtext.text = currentHealth.ToString();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)//when touched by an enemy mob
     {
        if (collision.transform.tag == "enemy")
         {
-            currentHealth -= enemydamage;
+            currentHealth -= enemydamage;//take damage
             SetHealth(currentHealth);
         }
         if (Isdead)

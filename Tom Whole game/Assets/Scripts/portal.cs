@@ -24,12 +24,12 @@ public class portal : MonoBehaviour
         if(whereToCreate == "at1")
         {
             var instantiatedClone = Instantiate(player, portalspawn1.position, Quaternion.identity);
-            instantiatedClone.gameObject.tag = "Player";
+            instantiatedClone.gameObject.tag = "player";
         }
         else if(whereToCreate == "at2")
         {
             var instantiatedClone = Instantiate(player, portalspawn2.position, Quaternion.identity);
-            instantiatedClone.gameObject.tag = "Player";
+            instantiatedClone.gameObject.tag = "player";
         }
     }
 
