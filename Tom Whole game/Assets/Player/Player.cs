@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    public int enemydamage= 100;
+    public GameObject target;
+    public Collision collision = new Collision();
     //Animator component
     public Animator animator;
 
@@ -35,12 +38,15 @@ public class Player : MonoBehaviour
 
     public Text healthtext;
 
+    //teleportation floats
+    private float entervelocity, exitvelocity;
+    private Rigidbody2D enterRigidbody;
 
     bool Isdead
     {
         get
         {
-            return currentHealth == 0;
+            return currentHealth <= 0;
         }
     }
     Camera cam;
@@ -105,6 +111,18 @@ public class Player : MonoBehaviour
         healthtext.text = currentHealth.ToString();
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+       if (collision.transform.tag == "enemy")
+        {
+            currentHealth -= enemydamage;
+            SetHealth(currentHealth);
+        }
+        if (Isdead)
+        {
+            animator.SetTrigger("death");
+        }
+    }
 
 
     public void TakeDamage(int damage)
