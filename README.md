@@ -5,7 +5,7 @@
 - Play as Tom Whole, a grumball from a distant willow woodlands. He has fallen into a dark hole and is terrified of those who dwell there. With the light of his heart, he illuminates his surrounding, but you must guide him to safety by pushing forward.
 
 # Controls:
-- Left Arrow(move left) / Right Arrow(move right)
+- Left Arrow or A key (move left) / Right Arrow or D key (move right)
 - Spacebar (jump)
 
 ![](https://piskel-imgstore-b.appspot.com/img/6d945605-7437-11ea-8cd7-718efdc45ede.gif) Each jump hurts Tom, jump too much and Tom explodes. ![](https://piskel-imgstore-b.appspot.com/img/d580990c-7438-11ea-b32a-718efdc45ede.gif)
